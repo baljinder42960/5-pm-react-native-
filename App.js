@@ -756,255 +756,276 @@
 
 
 
-import React from "react";
-import HomeScreen from './src/HomeScreen'
-import LoginPage from './src/LoginPage'
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-} from "react-native";
+// import React from "react";
+// import HomeScreen from './src/HomeScreen'
+// import LoginPage from './src/LoginPage'
+// import {
+//   View,
+//   Text,
+//   Image,
+//   TouchableOpacity,
+//   ScrollView,
+//   StyleSheet,
+// } from "react-native";
 
-export default function App() {
-  const posts = [
-    "https://picsum.photos/300/300?1",
-    "https://picsum.photos/300/300?2",
-    "https://picsum.photos/300/300?3",
-    "https://picsum.photos/300/300?4",
-    "https://picsum.photos/300/300?5",
-    "https://picsum.photos/300/300?6",
-    "https://picsum.photos/300/300?7",
-    "https://picsum.photos/300/300?8",
-    "https://picsum.photos/300/300?9",
-  ];
+// export default function App() {
+//   const posts = [
+//     "https://picsum.photos/300/300?1",
+//     "https://picsum.photos/300/300?2",
+//     "https://picsum.photos/300/300?3",
+//     "https://picsum.photos/300/300?4",
+//     "https://picsum.photos/300/300?5",
+//     "https://picsum.photos/300/300?6",
+//     "https://picsum.photos/300/300?7",
+//     "https://picsum.photos/300/300?8",
+//     "https://picsum.photos/300/300?9",
+//   ];
 
-  return (
-    <ScrollView style={styles.container}>
+//   return (
+//     <ScrollView style={styles.container}>
       
-      {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity>
-          <Text style={styles.icon}>‹</Text>
-        </TouchableOpacity>
+//       {/* Header */}
+//       <View style={styles.header}>
+//         <TouchableOpacity>
+//           <Text style={styles.icon}>‹</Text>
+//         </TouchableOpacity>
 
-        <Text style={styles.headerUsername}>baljinder</Text>
+//         <Text style={styles.headerUsername}>baljinder</Text>
 
-        <TouchableOpacity>
-          <Text style={styles.icon}>☰</Text>
-        </TouchableOpacity>
-      </View>
+//         <TouchableOpacity>
+//           <Text style={styles.icon}>☰</Text>
+//         </TouchableOpacity>
+//       </View>
 
-      {/* Profile Section */}
-      <View style={styles.profileSection}>
-        <Image
-          source={{
-            uri: "https://i.pravatar.cc/300?img=12",
-          }}
-          style={styles.profileImage}
-        />
+//       {/* Profile Section */}
+//       <View style={styles.profileSection}>
+//         <Image
+//           source={{
+//             uri: "https://i.pravatar.cc/300?img=12",
+//           }}
+//           style={styles.profileImage}
+//         />
 
-        <Text style={styles.name}>Baljinder Singh</Text>
-        <Text style={styles.username}>@baljinder</Text>
+//         <Text style={styles.name}>Baljinder Singh</Text>
+//         <Text style={styles.username}>@baljinder</Text>
 
-        <Text style={styles.bio}>
-          React Native Developer 🚀{"\n"}
-          Building modern mobile applications
-        </Text>
+//         <Text style={styles.bio}>
+//           React Native Developer 🚀{"\n"}
+//           Building modern mobile applications
+//         </Text>
 
-        <Text style={styles.location}>📍 Punjab, India</Text>
+//         <Text style={styles.location}>📍 Punjab, India</Text>
 
-        <Text style={styles.website}>🌐 github.com/baljinder42960</Text>
+//         <Text style={styles.website}>🌐 github.com/baljinder42960</Text>
 
-        {/* Edit Button */}
-        <TouchableOpacity style={styles.editButton}>
-          <Text style={styles.editText}>Edit Profile</Text>
-        </TouchableOpacity>
-      </View>
+//         {/* Edit Button */}
+//         <TouchableOpacity style={styles.editButton}>
+//           <Text style={styles.editText}>Edit Profile</Text>
+//         </TouchableOpacity>
+//       </View>
 
-      {/* Stats */}
-      <View style={styles.stats}>
-        <View style={styles.statBox}>
-          <Text style={styles.statNumber}>24</Text>
-          <Text style={styles.statText}>Posts</Text>
-        </View>
+//       {/* Stats */}
+//       <View style={styles.stats}>
+//         <View style={styles.statBox}>
+//           <Text style={styles.statNumber}>24</Text>
+//           <Text style={styles.statText}>Posts</Text>
+//         </View>
 
-        <View style={styles.statBox}>
-          <Text style={styles.statNumber}>1.2K</Text>
-          <Text style={styles.statText}>Followers</Text>
-        </View>
+//         <View style={styles.statBox}>
+//           <Text style={styles.statNumber}>1.2K</Text>
+//           <Text style={styles.statText}>Followers</Text>
+//         </View>
 
-        <View style={styles.statBox}>
-          <Text style={styles.statNumber}>356</Text>
-          <Text style={styles.statText}>Following</Text>
-        </View>
-      </View>
+//         <View style={styles.statBox}>
+//           <Text style={styles.statNumber}>356</Text>
+//           <Text style={styles.statText}>Following</Text>
+//         </View>
+//       </View>
 
-      {/* Content Heading */}
-      <View style={styles.contentHeader}>
-        <Text style={styles.contentTitle}>Posts</Text>
-      </View>
+//       {/* Content Heading */}
+//       <View style={styles.contentHeader}>
+//         <Text style={styles.contentTitle}>Posts</Text>
+//       </View>
 
-      {/* 3 Column Grid */}
-      <View style={styles.grid}>
-        {posts.map((image, index) => (
-          <TouchableOpacity key={index} style={styles.post}>
-            <Image
-              source={{ uri: image }}
-              style={styles.postImage}
-            />
-          </TouchableOpacity>
-        ))}
-      </View>
+//       {/* 3 Column Grid */}
+//       <View style={styles.grid}>
+//         {posts.map((image, index) => (
+//           <TouchableOpacity key={index} style={styles.post}>
+//             <Image
+//               source={{ uri: image }}
+//               style={styles.postImage}
+//             />
+//           </TouchableOpacity>
+//         ))}
+//       </View>
 
-    </ScrollView>
-  );
-}
+//     </ScrollView>
+//   );
+// }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//   },
 
-  /* Header */
-  header: {
-    height: 60,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "#eee",
-  },
+//   /* Header */
+//   header: {
+//     height: 60,
+//     flexDirection: "row",
+//     alignItems: "center",
+//     justifyContent: "space-between",
+//     paddingHorizontal: 20,
+//     borderBottomWidth: 1,
+//     borderBottomColor: "#eee",
+//   },
 
-  headerUsername: {
-    fontSize: 18,
-    fontWeight: "700",
-  },
+//   headerUsername: {
+//     fontSize: 18,
+//     fontWeight: "700",
+//   },
 
-  icon: {
-    fontSize: 30,
-    color: "#222",
-  },
+//   icon: {
+//     fontSize: 30,
+//     color: "#222",
+//   },
 
-  /* Profile */
-  profileSection: {
-    alignItems: "center",
-    paddingVertical: 20,
-    paddingHorizontal: 20,
-  },
+//   /* Profile */
+//   profileSection: {
+//     alignItems: "center",
+//     paddingVertical: 20,
+//     paddingHorizontal: 20,
+//   },
 
-  profileImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 12,
-  },
+//   profileImage: {
+//     width: 100,
+//     height: 100,
+//     borderRadius: 50,
+//     marginBottom: 12,
+//   },
 
-  name: {
-    fontSize: 21,
-    fontWeight: "700",
-    color: "#222",
-  },
+//   name: {
+//     fontSize: 21,
+//     fontWeight: "700",
+//     color: "#222",
+//   },
 
-  username: {
-    fontSize: 14,
-    color: "#777",
-    marginTop: 3,
-  },
+//   username: {
+//     fontSize: 14,
+//     color: "#777",
+//     marginTop: 3,
+//   },
 
-  bio: {
-    textAlign: "center",
-    fontSize: 14,
-    lineHeight: 21,
-    color: "#444",
-    marginTop: 12,
-  },
+//   bio: {
+//     textAlign: "center",
+//     fontSize: 14,
+//     lineHeight: 21,
+//     color: "#444",
+//     marginTop: 12,
+//   },
 
-  location: {
-    fontSize: 14,
-    color: "#666",
-    marginTop: 8,
-  },
+//   location: {
+//     fontSize: 14,
+//     color: "#666",
+//     marginTop: 8,
+//   },
 
-  website: {
-    fontSize: 14,
-    color: "#3478f6",
-    marginTop: 5,
-  },
+//   website: {
+//     fontSize: 14,
+//     color: "#3478f6",
+//     marginTop: 5,
+//   },
 
-  editButton: {
-    width: "90%",
-    height: 42,
-    borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 8,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 15,
-  },
+//   editButton: {
+//     width: "90%",
+//     height: 42,
+//     borderWidth: 1,
+//     borderColor: "#ccc",
+//     borderRadius: 8,
+//     justifyContent: "center",
+//     alignItems: "center",
+//     marginTop: 15,
+//   },
 
-  editText: {
-    fontSize: 15,
-    fontWeight: "600",
-  },
+//   editText: {
+//     fontSize: 15,
+//     fontWeight: "600",
+//   },
 
   
-  stats: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderColor: "#eee",
-    paddingVertical: 15,
-  },
+//   stats: {
+//     flexDirection: "row",
+//     justifyContent: "space-around",
+//     borderTopWidth: 1,
+//     borderBottomWidth: 1,
+//     borderColor: "#eee",
+//     paddingVertical: 15,
+//   },
 
-  statBox: {
-    alignItems: "center",
-    width: "33%",
-  },
+//   statBox: {
+//     alignItems: "center",
+//     width: "33%",
+//   },
 
-  statNumber: {
-    fontSize: 18,
-    fontWeight: "700",
-  },
+//   statNumber: {
+//     fontSize: 18,
+//     fontWeight: "700",
+//   },
 
-  statText: {
-    fontSize: 13,
-    color: "#777",
-    marginTop: 3,
-  },
+//   statText: {
+//     fontSize: 13,
+//     color: "#777",
+//     marginTop: 3,
+//   },
 
-  /* Content */
-  contentHeader: {
-    paddingHorizontal: 15,
-    paddingVertical: 15,
-  },
+//   /* Content */
+//   contentHeader: {
+//     paddingHorizontal: 15,
+//     paddingVertical: 15,
+//   },
 
-  contentTitle: {
-    fontSize: 18,
-    fontWeight: "700",
-  },
+//   contentTitle: {
+//     fontSize: 18,
+//     fontWeight: "700",
+//   },
 
-  /* Grid */
-  grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 3,
-    paddingHorizontal: 3,
-    paddingBottom: 20,
-  },
+//   /* Grid */
+//   grid: {
+//     flexDirection: "row",
+//     flexWrap: "wrap",
+//     gap: 3,
+//     paddingHorizontal: 3,
+//     paddingBottom: 20,
+//   },
 
-  post: {
-    width: "32.5%",
-    aspectRatio: 1,
-  },
+//   post: {
+//     width: "32.5%",
+//     aspectRatio: 1,
+//   },
 
-  postImage: {
-    width: "100%",
-    height: "100%",
-  },
-});
+//   postImage: {
+//     width: "100%",
+//     height: "100%",
+//   },
+// });
+
+
+
+
+
+
+
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+
+const hhhh = () => {
+  return (
+    <View>
+      <Text>hhhh</Text>
+    </View>
+  )
+}
+
+export default hhhh
+
+const styles = StyleSheet.create({})
