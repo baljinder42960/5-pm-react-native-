@@ -24,97 +24,96 @@
 
 
 
-import React, { useState } from 'react';
-import View,Text,TextInput,TouchableOpacity,StyleSheet
+import React from "react";
+import {View,Text,TextInput,TouchableOpacity,StyleSheet,} from "react-native";
 
-export default function App() {
-
- 
-
-  const register = () => {
-   
-
+export default function LoginScreen() {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.title}>Registration Form</Text>
+      <Text style={styles.title}>Welcome Back</Text>
 
+      <Text style={styles.subtitle}>
+        Login to your account
+      </Text>
+
+     
       <TextInput
         style={styles.input}
-        placeholder="Enter your name"
-        value={name}
-        onChangeText={setName}
-      />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Enter email"
-        value={email}
-        onChangeText={setEmail}
+        placeholder="Enter Email"
         keyboardType="email-address"
       />
 
+      
       <TextInput
         style={styles.input}
-        placeholder="Enter phone number"
-        value={phone}
-        onChangeText={setPhone}
-        keyboardType="phone-pad"
-      />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Enter password"
-        value={password}
-        onChangeText={setPassword}
+        placeholder="Enter Password"
         secureTextEntry={true}
       />
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={register}
-      >
-        <Text style={styles.buttonText}>Register</Text>
+      
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
+
+      <Text style={styles.registerText}>
+        Don't have an account? Register
+      </Text>
 
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-
   container: {
     flex: 1,
-    justifyContent: 'center',
-    padding: 20,
-    backgroundColor: 'white'
+    backgroundColor: "#F5F9FF",
+    justifyContent: "center",
+    padding: 25,
   },
 
   title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 25
+    fontSize: 30,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: "#2878D4",
+  },
+
+  subtitle: {
+    fontSize: 16,
+    textAlign: "center",
+    color: "#666",
+    marginTop: 8,
+    marginBottom: 30,
   },
 
   input: {
+    backgroundColor: "white",
     borderWidth: 1,
-    borderColor: 'gray',
-    padding: 12,
+    borderColor: "#DDD",
+    borderRadius: 10,
+    padding: 15,
     marginBottom: 15,
-    borderRadius: 8
+    fontSize: 16,
   },
 
   button: {
-    backgroundColor: 'blue',
+    backgroundColor: "#2878D4",
     padding: 15,
-    borderRadius: 8
+    borderRadius: 10,
+    alignItems: "center",
+    marginTop: 10,
   },
 
   buttonText: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: 18
-  }
+    color: "white",
+    fontSize: 17,
+    fontWeight: "bold",
+  },
 
+  registerText: {
+    textAlign: "center",
+    marginTop: 20,
+    color: "#555",
+  },
 });
